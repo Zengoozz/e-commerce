@@ -1,0 +1,61 @@
+<div *ngIf="success === false" style="padding-top: 70px;padding-left: 5%;padding-right: 5%;" >
+    <div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="/products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Cart Items -->
+    <div class="product-container">
+        <div *ngFor="let i of items">
+            <img src="{{i.img}}" alt="img" height="300" width="250">
+            <h2><strong>{{i.name}}</strong></h2>
+            <!-- Quantity Form -->
+            <form style="width: 80%;" class="form-group mb-2">
+                <label for="quantity">Quantity:</label>
+                <input min="0" class="form-control" name="quantity" (ngModelChange)="onChange(i.id,i.quantity)" [(ngModel)]="i.quantity" type="number">
+                <br>
+                <h3>Cost: {{i.quantity * i.price}} $</h3>
+            </form>
+        </div>
+        <br>
+        
+        
+    </div>
+    <h3>Total Cost: {{totalCost}} $</h3>
+    <hr>
+    <!-- Payment Form -->
+    <div style="width: 30%;">
+        <form class="form-group mb-2" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+            <!-- Name -->
+            <label for="name">Full name</label>
+            <br>
+            <input class="form-control" type="text" placeholder="Enter your full name" formControlName="fullName">
+            <br><br>
+            <!-- Address -->
+            <label for="address">Address</label>
+            <br>
+            <input class="form-control" type="text" placeholder="Enter your address" formControlName="address">
+            <br> <br>
+            <!-- Credit Card -->
+            <label for="creditCard">Credit card</label>
+            <br>
+            <input class="form-control" type="text" placeholder="Enter your credit card number" formControlName="creditCard">
+            <br><br>
+            <!-- Button -->
+            <button class="btn btn-dark" [disabled]="!exist || paymentForm.invalid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="success === true" style="padding-top: 70px;">
+    <app-confirm-page [user]="user"></app-confirm-page>
+</div>

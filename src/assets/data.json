@@ -1,0 +1,45 @@
+[
+    {
+      "id": "1",
+      "name": "Pepsi",
+      "price": "10",
+      "img": "assets/images/pepsi.jpg",
+      "description": "Drink and Hype"
+    },
+    {
+      "id": "2",
+      "name": "Shoes",
+      "price": "150",
+      "img": "assets/images/shoes.jpg",
+      "description": "Classy Leather"
+    },
+    {
+      "id": "3",
+      "name": "Watch",
+      "price": "100",
+      "img": "assets/images/watch.jpg",
+      "description": "Watch your time"
+    },
+    {
+      "id": "4",
+      "name": "Sneakers",
+      "price": "150",
+      "img": "assets/images/sneakers.jpg",
+      "description": "Stay fit and wear sporty"
+    },
+    {
+      "id": "5",
+      "name": "Lip Stick",
+      "price": "40",
+      "img": "assets/images/lipstick.jpg",
+      "description": "Preserve your glowing"
+    },
+    {
+      "id": "6",
+      "name": "Headphones",
+      "price": "100",
+      "img": "assets/images/headphones.jpg",
+      "description": "Listen and Vibe"
+    }
+  ]
+  

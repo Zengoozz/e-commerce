@@ -1,0 +1,19 @@
+<div style="padding-top: 70px;padding-left: 5%;padding-right: 5%" class="product-container">
+
+    <div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="/">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <app-product-item *ngFor="let p of productList" [product]="p"></app-product-item>
+</div>

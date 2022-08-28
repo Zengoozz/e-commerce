@@ -1,0 +1,25 @@
+<div style="padding-top: 70px;">
+    <div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="/products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="confirmation-container">
+        <div class="confirmation-items">
+            <h1 class="confirmation-header">Success</h1>
+
+            <p>Thank you, <strong>{{user.name}}</strong>! </p>
+            <br>
+            <p>Your order costs <strong>{{user.cost}} $</strong> and has been confirmed.</p>
+        </div>
+    </div>
+</div>

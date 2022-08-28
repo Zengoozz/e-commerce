@@ -1,0 +1,9 @@
+<div style="width: 80%;"> 
+<form class="form-group mb-2"  [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <label for="quantity">Quantity</label>
+    <br>
+    <input min="0" class="form-control" type="number" placeholder="Enter quantity!" formControlName="quantity">
+    <br>
+    <button class="btn btn-dark" [disabled]="productForm.invalid">Add to cart</button>
+</form>
+</div>
