@@ -21,7 +21,7 @@
             <!-- Quantity Form -->
             <form style="width: 80%;" class="form-group mb-2">
                 <label for="quantity">Quantity:</label>
-                <input min="0" class="form-control" name="quantity" (ngModelChange)="onChange(i.id,i.quantity)" [(ngModel)]="i.quantity" type="number">
+                <input min="0" class="form-control" name="quantity" (ngModelChange)="onChange(i.id,$event)" [(ngModel)]="i.quantity" type="number">
                 <br>
                 <h3>Cost: {{i.quantity * i.price}} $</h3>
             </form>

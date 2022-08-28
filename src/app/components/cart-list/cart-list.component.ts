@@ -58,9 +58,8 @@ export class CartListComponent implements OnInit, AfterContentChecked {
 
   onChange(id: string, quantity:number): void {
     this.quantity = quantity;
-    console.log(`q: ${this.quantity}`);
     this.cartService.changeQuantity(id,this.quantity);
-    if (quantity === 1) {
+    if (quantity === 0) {
       this.items = this.cartService.removeFromCart(id);
       this.totalCost = 0;
     }
